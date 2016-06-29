@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Apple Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+<link href="jqueryMobile/jquery.mobile-1.4.5.css" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<script>window.$ = window.jQuery = WLJQ;</script>
+<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+</head>
+<body style="display: none;">
+<div data-role="page" id="customer">
+
+ <!-- /panel -->
+  <div data-role="header" style="background-color: #00838F"> <a href="#addmenu1" id="btn2" style="background-color: #FFFFFF" data-role="button" data-icon="home" data-inline="true">Menu</a>
+    <h1 style="color: #DFE2DB"> Customer </h1>
+    
+   <a href="#popAddCus" id="btn1" data-rel='popup' data-position-to='window' data-transition='slide' data-role="button" style="background-color: #FFFFFF" data-icon="plus">Add</a>
+    <div data-role="popup" id="popAddCus" data-transition="fade" style="background-color: #00897B" class="ui-content"> <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      <form id="frm3" action="#" method="get">
+        <input type="text" name="textinput" id="txtCusIDAdd" placeholder="Customer ID" value="" required/>
+            <input type="text" name="textinput" id="txtCusNameAdd" placeholder="Customer Name" value="" required/>
+            <input type="text" name="textinput" id="txtCusAddAdd" placeholder="Address" value="" required/>
+            <input type="text" name="textinput" id="txtCusPhoneAdd" placeholder="Phone" value="" required/>
+        <div class="ui-grid-a">
+          <div class="ui-block-a"><a href="#" id="btnAdd" data-rel="submit" class="ui-btn ui-shadow ui-icon-plus ui-btn-icon-left ui-corner-all ui-btn-b ui-mini">Add</a></div>
+          <div class="ui-block-b"><a href="#" id="btnReset" data-rel="reset" class="ui-btn ui-shadow ui-icon-back ui-btn-icon-left ui-corner-all ui-btn-a ui-mini">Reset</a></div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- /header -->
+  
+  <div id="listCustomer" data-role="content">
+  <div id="one">
+        <ul id="listCus" data-split-icon="delete" data-autodividers="true" data-role="listview" data-filter="true" data-inset="true">
+        </ul>
+        <div data-role="popup" id="updateCus" data-transition="slidedown" style="background-color: #00897B" class="ui-content"> <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+          <form id="frmx" action="#" method="get">
+            <input type="text" class="ui-state-disabled" name="textinput" id="txtCusID" placeholder="Customer ID" value="" required/>
+            <input type="text" name="textinput" id="txtCusName" placeholder="Customer Name" value="" required/>
+            <input type="text" name="textinput" id="txtCusAdd" placeholder="Address" value="" required/>
+            <input type="text" name="textinput" id="txtCusPhone" placeholder="Phone" value="" required/>
+            <div class="ui-grid-a">
+              <div class="ui-block-a"><a href="#" id="btnEdit" data-rel="submit" class="ui-btn ui-shadow ui-icon-edit ui-btn-icon-left ui-corner-all ui-btn-b ui-mini">Update</a></div>
+              <div class="ui-block-b"><a href="#" id="btnReset" data-rel="back" class="ui-btn ui-shadow ui-icon-back ui-btn-icon-left ui-corner-all ui-btn-a ui-mini">Cancel</a></div>
+            </div>
+          </form>
+        </div>
+        <div data-role="popup" id="delCustomer" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+          <h3>Delete this Customer ?</h3>
+          <p>All information will be deleted.</p>
+          <a href="#" id="btn" onclick="" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Delete</a> <a href="#" id="btn" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left ui-btn-inline ui-mini">Cancel</a> </div>
+     
+</div>
+  </div>
+  <div data-position="fixed" data-role="footer" id="bgfoot">
+    <h4 style="text-align: center;">&copy; Design by LeDucThanh</h4>
+    <!-- /footernavbar --> 
+  </div>
+  <!-- /panel -->
+  <div data-role="panel" data-position="left" data-display="overlay" data-theme="a" id="addmenu1"> <a href="index.html" data-role="button" data-icon="user">Apple Shop</a>
+    <ul data-role="listview" data-inset="true">
+      <li data-icon="search"><a href="customer.html">Customer</a></li>
+      <li data-icon="gear"><a href="#">Order</a></li>
+      <li data-icon="info"><a href="#">About</a></li>
+      <li data-icon="phone"><a href="#">Contacts</a></li>
+    </ul>
+    <a href="#" data-role="button" data-rel="close" data-icon="delete">Close</a> </div>
+
+	
+</div><!-- /page -->
+<script src="js/initOptions.js"></script> 
+<script src="js/main.js"></script> 
+<script src="js/messages.js"></script>
+</body>
+</html>
